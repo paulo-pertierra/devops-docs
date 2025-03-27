@@ -10,7 +10,6 @@
         "streetsidesoftware.code-spell-checker",
         "eamodio.gitlens",
         "github.vscode-pull-request-github",
-        "ms-vscode-remote.remote-containers"
       ]
     },
     "settings": {
@@ -20,5 +19,5 @@
       }
     }
   },
-  "postCreateCommand": "npm install"
+  "postCreateCommand": "npm install && for ext in dbaeumer.vscode-eslint esbenp.prettier-vscode ms-vscode.vscode-typescript-next streetsidesoftware.code-spell-checker eamodio.gitlens github.vscode-pull-request-github ms-vscode-remote.remote-containers; do code-server --install-extension $ext; done"
 }
